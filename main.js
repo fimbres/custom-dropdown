@@ -1,5 +1,3 @@
-let isOpen = false;
-let selectedIndex = null;
 let optionsData = [
     "First Item",
     "Second Item",
@@ -16,7 +14,7 @@ optionsContainer.innerHTML = `
     ${optionsData.map((o, id) => `
         <div class="option" value="${id}">
             <p>${o}</p>
-            <p class="hidden">Check</p>
+            <p class="check hidden">Check</p>
         </div>
     `).join('')}
 `;
@@ -47,7 +45,6 @@ for(let i = 0; i < options.length; i++) {
     
         hideAllChecks(options, i);
         check.classList.toggle('hidden');
-        selectedIndex === newIndex ? null : newIndex;
-        placeholder.innerText = selectedIndex !== null ? optionsData[selectedIndex] : "Select an item";
+        placeholder.innerText = !check.classList.contains('hidden') ? optionsData[newIndex] : "Select an item";
     });
 }
