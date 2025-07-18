@@ -1,0 +1,62 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+    background: #1f1f1f;
+}
+
+h1, p {
+    color: #e9e9e9;
+}
+
+.container {
+    position: relative;
+    padding: 20px;
+}
+
+#dropdown-input {
+    display: flex;
+    flex: 1 1 auto;
+    border-radius: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background: #0f0f0f;
+    cursor: pointer;
+}
+
+#options-container {
+    position: absolute;
+    top: 180px;
+    right: 25px;
+    left: 25px;
+    display: flex;
+    flex-direction: column;
+    background: #0f0f0f;
+    gap: 10px;
+}
+
+.option {
+    display: flex;
+    height: min-content;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 35px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.open {
+    border: 2px solid #04b361;
+}
+
+.check {
+    color: #04b361;
+}
